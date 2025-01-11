@@ -1,0 +1,22 @@
+services:
+  storage:
+    image: zenko/cloudserver
+    ports:
+      - "8000:8000"
+    environment:
+      REMOTE_MANAGEMENT_DISABLE: "1"
+      S3BACKEND: "file"
+      S3DATAPATH: "/storage/data"
+      S3METADATAPATH: "/storage/metadata"
+    volumes:
+      - "storage-data:/storage"
+
+  storage-init:
+    image: alpine
+    profiles: ["init"]
+    command: ["mkdir", "/storage/data", "/storage/metadata"]
+    volumes:
+      - "storage-data:/storage"
+
+volumes:
+  storage-data:
