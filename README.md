@@ -47,6 +47,10 @@ npm run start
 
 初期設定では、`http://localhost:3000/` でファイルアップローダにアクセスできるはずである。
 
+## 関連記事
+
+[NestJS で S3 互換ストレージに保存するファイルアップローダを作る #TypeScript - Qiita](https://qiita.com/mikecat_mixc/items/4ddda1244a551d1e7404)
+
 ## ライセンス
 
 私 (みけCAT) に権利がある部分については、[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) とする。
